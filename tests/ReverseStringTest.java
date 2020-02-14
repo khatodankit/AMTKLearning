@@ -9,5 +9,7 @@ public class ReverseStringTest {
 
         Assert.assertEquals("abcd", new ReverseString().reverseStringSingleVarSpace("dcba"));
         Assert.assertEquals("abcde", new ReverseString().reverseStringSingleVarSpace("edcba"));
+
+        Assert.assertEquals("abcde", new ReverseString().reverseStringRecursive("edcba"));
     }
 }

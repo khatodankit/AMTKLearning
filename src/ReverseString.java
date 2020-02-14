@@ -26,6 +26,6 @@ public class ReverseString {
         if (str.length() <= 1)
             return str;
 
-        return reverseStringRecursive(str.substring(1) + str.charAt(0));
+        return reverseStringRecursive(str.substring(1)) + str.charAt(0);
     }
 }
