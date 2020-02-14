@@ -1,4 +1,5 @@
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class FirstNonRepeating {
 
@@ -10,7 +11,7 @@ public class FirstNonRepeating {
      * @return Character, null
      */
     public Character findFirstNonRepeating(String str) {
-        LinkedHashMap<Character, Integer> charCount = new LinkedHashMap<>();
+        Map<Character, Integer> charCount = new LinkedHashMap<>();
         for (Character c : str.toCharArray()) {
             if (charCount.containsKey(c)) {
                 charCount.put(c, charCount.get(c) + 1);
