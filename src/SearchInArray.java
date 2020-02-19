@@ -31,11 +31,15 @@ public class SearchInArray {
 
         int halfPoint = size / 2;
 
-        if (search < iArr[halfPoint] && search > iArr[startIndex])
+        if (iArr[halfPoint] == search)
+            return halfPoint;
+
+
+        if (search <= iArr[halfPoint] && search > iArr[startIndex])
             return searchInRotatedArray(iArr, search, startIndex, startIndex + halfPoint);
         else if (search < iArr[halfPoint] && search < iArr[startIndex])
             return searchInRotatedArray(iArr, search, startIndex + halfPoint, endIndex);
-        else if (search > iArr[halfPoint] && search < iArr[endIndex])
+        else if (search >= iArr[halfPoint] && search < iArr[endIndex])
             return searchInRotatedArray(iArr, search, startIndex + halfPoint, endIndex);
         else if (search > iArr[halfPoint] && search > iArr[endIndex])
             return searchInRotatedArray(iArr, search, startIndex, startIndex + halfPoint);
