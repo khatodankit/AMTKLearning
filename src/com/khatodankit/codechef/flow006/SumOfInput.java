@@ -3,10 +3,10 @@ package com.khatodankit.codechef.flow006;
 import java.util.Scanner;
 
 public class SumOfInput {
-    public static void main(String[] args) throws java.lang.Exception {
+    public static void main(String[] args) {
         int[] inputs = getUserInputs();
-        for (int i = 0; i < inputs.length; i++) {
-            System.out.println(sumOfDigits(inputs[i]));
+        for (int input : inputs) {
+            System.out.println(sumOfDigits(input));
         }
     }
 
